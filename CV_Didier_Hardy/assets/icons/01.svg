@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 114" width="120" height="114">
+  <!-- Poignée -->
+  <path d="M 48 30
+           L 48 21
+           A 8 8 0 0 1 56 13
+           L 64 13
+           A 8 8 0 0 1 72 21
+           L 72 30"
+        fill="none" stroke="#066547" stroke-width="8" stroke-linecap="square"/>
+
+  <!-- Corps de la mallette -->
+  <rect x="12" y="30" width="96" height="72" rx="10" fill="#066547"/>
+
+  <!-- Bande blanche horizontale -->
+  <rect x="12" y="55" width="96" height="5" fill="#FFFFFF"/>
+
+  <!-- Fermoir : carré blanc -->
+  <rect x="51" y="50" width="18" height="18" rx="3" fill="#FFFFFF"/>
+  <!-- Fermoir : petit carré vert au centre -->
+  <rect x="55" y="54" width="10" height="10" rx="2" fill="#066547"/>
+</svg>

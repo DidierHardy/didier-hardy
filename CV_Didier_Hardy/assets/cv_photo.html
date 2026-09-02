@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo CV – Didier Hardy</title>
+<style>
+    * { box-sizing: border-box; }
+    html, body {
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Bloc principal : proportions proches de l'en-tête du CV */
+    .cv-header {
+        position: relative;
+        width: 100%;
+        max-width: 1600px;
+        height: 430px;
+        overflow: hidden;
+        background: #ffffff;
+        margin: 0 auto;
+    }
+
+    /* Fond bleu nuit qui descend sous la photo, comme sur le CV */
+    .blue-panel {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 31%;
+        height: 48%;
+        background: #092b3b;
+        clip-path: polygon(0 0, 78% 0, 100% 100%, 100% 100%, 0 100%);
+        z-index: 1;
+    }
+
+    /* Photo */
+    .photo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        clip-path: polygon(
+            0 0,
+            75% 0,
+            100% 37%,
+            80% 100%,
+            0 100%
+        );
+        z-index: 2;
+    }
+
+    /* Liseré vert entre la photo et le blanc */
+    .green-border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30.8%;
+        height: 100%;
+        background: #00855f;
+        clip-path: polygon(
+            0 0,
+            76% 0,
+            100% 37%,
+            81% 100%,
+            0 100%
+        );
+        z-index: 1;
+    }
+
+    /* Réserve blanche légèrement décalée afin de créer le contour */
+    .photo-cutout {
+        position: absolute;
+        left: 0.7%;
+        top: 0;
+        width: 29.9%;
+        height: 100%;
+        background: #ffffff;
+        clip-path: polygon(
+            0 0,
+            74.5% 0,
+            98.5% 37%,
+            79.5% 100%,
+            0 100%
+        );
+        z-index: 2;
+    }
+
+    .photo-front {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25.4%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        clip-path: polygon(
+            0 0,
+            74.5% 0,
+            98.5% 37%,
+            79.5% 100%,
+            0 100%
+        );
+        z-index: 3;
+    }
+
+    /* Zone blanche du CV */
+    .white-area {
+        position: absolute;
+        left: 31%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #ffffff;
+        z-index: 0;
+    }
+
+    .example-title {
+        position: absolute;
+        left: 34%;
+        top: 48px;
+        color: #122333;
+        font-size: clamp(28px, 4vw, 62px);
+        font-weight: 700;
+        letter-spacing: 2px;
+        z-index: 4;
+    }
+
+    .example-title span {
+        color: #00855f;
+    }
+
+    .subtitle {
+        position: absolute;
+        left: 34%;
+        top: 120px;
+        color: #122333;
+        font-size: clamp(13px, 1.25vw, 21px);
+        z-index: 4;
+    }
+
+    @media (max-width: 800px) {
+        .cv-header { height: 300px; }
+        .example-title { top: 30px; }
+        .subtitle { top: 92px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="cv-header">
+    <div class="white-area"></div>
+    <div class="blue-panel"></div>
+
+    <!-- Liseré vert -->
+    <div class="green-border"></div>
+
+    <!-- Photo originale, simplement découpée en forme géométrique -->
+    <img class="photo-front" src="portrait.jpg" alt="Photo de Didier Hardy">
+
+    <!-- Exemple de zone texte : supprimer ces deux blocs si nécessaire -->
+    <div class="example-title">DIDIER <span>HARDY</span></div>
+    <div class="subtitle">INFORMATICIEN LABORATOIRE – DÉVELOPPEMENT &amp; INFRASTRUCTURE IT</div>
+</div>
+
+</body>
+</html>
